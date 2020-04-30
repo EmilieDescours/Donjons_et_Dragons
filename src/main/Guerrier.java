@@ -63,6 +63,7 @@ public class Guerrier {
 
 	
 	// Les Constructeurs**********************
+	
 	public Guerrier() {
 		this.nom = "undefined";
 		this.url = "undefined";
