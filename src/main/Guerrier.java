@@ -1,17 +1,68 @@
 package main;
 
 public class Guerrier {
-	String nom;
-	String url;
-	int niveau_de_vie;
-	int force_attaque;
+	private String nom;
+	private String url;
+	private int niveau_de_vie;
+	private int force_attaque;
 	Arme arme;
 	Bouclier bouclier;
-	int max_niveau_de_vie = 10;
-	int min_niveau_de_vie = 5;
-	int max_force_attaque = 10;
-	int min_force_attaque = 5;
+	private int max_niveau_de_vie = 10;
+	private int min_niveau_de_vie = 5;
+	private int max_force_attaque = 10;
+	private int min_force_attaque = 5;
 
+	public String toString() {
+		return this.nom + " est un guerrier. Il a " + this.niveau_de_vie + " et " + this.force_attaque;
+	}
+
+	// Les Getters *************************
+
+	public String getName() {
+		return this.nom;
+	}
+
+	public String getURL() {
+		return this.url;
+	}
+
+	public int getLife() {
+		return this.niveau_de_vie;
+	}
+
+	public int getStrong() {
+		return this.force_attaque;
+	}
+
+	public String getArme() {
+		return this.arme.getName();
+	}
+
+	public String getBouclier() {
+		return this.bouclier.getName();
+	}
+
+	// Les Setters *************************
+
+	public void setName(String newValue) {
+		this.nom = newValue;
+	}
+
+	public void setURL(String newValue) {
+		this.url = newValue;
+	}
+	
+	public void setLife(int newValue) {
+		this.niveau_de_vie = newValue;
+	}
+
+	public void setStrong(int newValue) {
+		this.force_attaque = newValue;
+	}
+	
+
+	
+	// Les Constructeurs**********************
 	public Guerrier() {
 		this.nom = "undefined";
 		this.url = "undefined";

@@ -1,13 +1,20 @@
 package main;
 
 public class Arme {
-	String nom ;
-	int force_attaque;
-	
-	public Arme () {
+	private String nom;
+	private int force_attaque;
+
+	public Arme() {
 		this.nom = "undefined";
-		this.force_attaque= 1;
-		
+		this.force_attaque = 1;
+
+	}
+
+	public String getName() {
+		return this.nom;
+	}
 	
+	public int getStrong() {
+		return this.force_attaque;
 	}
 }

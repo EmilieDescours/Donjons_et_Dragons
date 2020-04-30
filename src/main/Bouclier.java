@@ -1,8 +1,8 @@
 package main;
 
 public class Bouclier {
-	String nom ;
-	int blocage;
+	private String nom ;
+	private int blocage;
 	
 	public Bouclier () {
 		this.nom = "undefined";
@@ -10,5 +10,12 @@ public class Bouclier {
 		
 		
 	
+	}
+	public String getName() {
+		return this.nom;
+	}
+	
+	public int getBlocage() {
+		return this.blocage;
 	}
 }

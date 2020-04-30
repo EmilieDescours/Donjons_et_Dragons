@@ -10,4 +10,11 @@ public class Sort {
 		
 	
 	}
+	public String getName() {
+		return this.nom;
+	}
+	
+	public int getStrong() {
+		return this.force_attaque;
+	}
 }

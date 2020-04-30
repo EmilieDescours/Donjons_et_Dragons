@@ -1,9 +1,13 @@
 package main;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
-public class Donjons_et_Dragons {
+public class DonjonsEtDragons {
 
+	private static ArrayList<Guerrier> guerrier = new ArrayList<Guerrier>();
+	private static ArrayList<Magicien> magicien = new ArrayList<Magicien>();
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int vie;
@@ -18,19 +22,21 @@ public class Donjons_et_Dragons {
 			System.out.println("Combien de vie voulez-vous donner à votre personnage ?");
 			try {
 				vie = sc.nextInt();
-			}catch(Exception InputMismatchException){
+			} catch (Exception InputMismatchException) {
 				System.out.println("Paramètre invalide");
 				vie = 0;
 			}
 			System.out.println("Combien de force voulez-vous donner à votre personnage ?");
 			try {
 				force = sc.nextInt();
-			}catch(Exception InputMismatchException){
+			} catch (Exception InputMismatchException) {
 				System.out.println("Paramètre invalide");
 				force = 0;
 			}
-			
+
 			System.out.println("Vous avez saisi : " + str);
+
+			
 			
 			if (str.equals("G")) {
 				if (!nom.equals("") && vie != 0 && force != 0) {
@@ -43,7 +49,7 @@ public class Donjons_et_Dragons {
 						force = 0;
 					}
 				}
-				
+
 				if (!nom.equals("") && vie == 0 && force == 0) {
 					Guerrier jo = new Guerrier(nom);
 					System.out.println(jo.nom);
@@ -52,20 +58,17 @@ public class Donjons_et_Dragons {
 					System.out.println(jo.nom);
 				}
 			} else if (str.equals("M")) {
-				
+
 				if (!nom.equals("") && vie != 0 && force != 0) {
 					try {
 						Magicien lulu = new Magicien(nom, vie, force);
 						System.out.println(lulu.nom + " " + lulu.niveau_de_vie + " " + lulu.force_attaque);
-					}catch (Exception IllegalArgumentExeception ) {
+					} catch (Exception IllegalArgumentExeception) {
 						System.out.println("Paramètre invalide");
 						vie = 0;
 						force = 0;
 					}
-					}
-					
-
-				else if (!nom.equals("")) {
+				} else if (!nom.equals("")) {
 
 					Magicien lulu = new Magicien(nom);
 					System.out.println(lulu.nom);

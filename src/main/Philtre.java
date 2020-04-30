@@ -10,4 +10,11 @@ public class Philtre {
 		
 	
 	}
+	public String getName() {
+		return this.nom;
+	}
+	
+	public int getRecuperation() {
+		return this.recuperation;
+	}
 }
