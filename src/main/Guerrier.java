@@ -1,10 +1,7 @@
 package main;
 
-public class Guerrier {
-	private String nom;
-	private String url;
-	private int niveau_de_vie;
-	private int force_attaque;
+public class Guerrier extends Personnage {
+
 	Arme arme;
 	Bouclier bouclier;
 	private int max_niveau_de_vie = 10;
@@ -18,22 +15,6 @@ public class Guerrier {
 
 	// Les Getters *************************
 
-	public String getName() {
-		return this.nom;
-	}
-
-	public String getURL() {
-		return this.url;
-	}
-
-	public int getLife() {
-		return this.niveau_de_vie;
-	}
-
-	public int getStrong() {
-		return this.force_attaque;
-	}
-
 	public String getArme() {
 		return this.arme.getName();
 	}
@@ -44,26 +25,16 @@ public class Guerrier {
 
 	// Les Setters *************************
 
-	public void setName(String newValue) {
-		this.nom = newValue;
+	public void setArme(Arme newValue) {
+		this.arme = newValue;
 	}
 
-	public void setURL(String newValue) {
-		this.url = newValue;
-	}
-	
-	public void setLife(int newValue) {
-		this.niveau_de_vie = newValue;
+	public void setBouclier(Bouclier newValue) {
+		this.bouclier = newValue;
 	}
 
-	public void setStrong(int newValue) {
-		this.force_attaque = newValue;
-	}
-	
-
-	
 	// Les Constructeurs**********************
-	
+
 	public Guerrier() {
 		this.nom = "undefined";
 		this.url = "undefined";

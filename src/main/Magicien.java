@@ -1,17 +1,14 @@
 package main;
 
-public class Magicien {
-	private String nom;
-	private String url;
-	private int niveau_de_vie;
-	private int force_attaque;
+public class Magicien extends Personnage {
+
 	private Sort sort;
 	private Philtre philtre;
 	private int max_niveau_de_vie = 6;
 	private int min_niveau_de_vie = 3;
 	private int max_force_attaque = 15;
 	private int min_force_attaque = 8;
-	
+
 	public String toString() {
 		return this.nom + " est un magicien. Il a " + this.niveau_de_vie + " et " + this.force_attaque;
 	}
@@ -48,42 +45,17 @@ public class Magicien {
 		this.sort = new Sort();
 		this.philtre = new Philtre();
 	}
-
 	// Les Setters *************************
 
-	public void setName(String newValue) {
-		this.nom = newValue;
+	public void setSort(Sort newValue) {
+		this.sort = newValue;
+
 	}
 
-	public void setURL(String newValue) {
-		this.url = newValue;
+	public void setPhiltre(Philtre newValue) {
+		this.philtre = newValue;
 	}
-
-	public void setLife(int newValue) {
-		this.niveau_de_vie = newValue;
-	}
-
-	public void setStrong(int newValue) {
-		this.force_attaque = newValue;
-	}
-
 	// Les Getters *************************
-
-	public String getName() {
-		return this.nom;
-	}
-
-	public String getURL() {
-		return this.url;
-	}
-
-	public int getLife() {
-		return this.niveau_de_vie;
-	}
-
-	public int getStrong() {
-		return this.force_attaque;
-	}
 
 	public String getSort() {
 		return this.sort.getName();
