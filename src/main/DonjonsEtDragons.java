@@ -14,17 +14,18 @@ public class DonjonsEtDragons {
 		Scanner sc = new Scanner(System.in);
 		while (true) {
 
-			System.out.println("Que souhaitez-vous faire? \n(C)réer des personnages\n(R)echercher \n(L)ister \n(Q)uitter");
+			System.out.println(
+					"Que souhaitez-vous faire? \n(C)réer des personnages\n(R)echercher \n(L)ister \n(Q)uitter");
 			String str = sc.nextLine();
 
 			if (str.equals("C")) {
 				CreationPerso.creationPerso(sc, guerriers, magiciens);
 
-			}else if (str.equals("R")) {
-				RecherchePerso.recherchePerso(sc, guerriers, magiciens);
+			} else if (str.equals("R")) {
+				RecherchePerso.recherche(sc, guerriers, magiciens);
 
-			}else if (str.equals("L")) {
-			ListerPerso.listerPerso(guerriers, magiciens);
+			} else if (str.equals("L")) {
+				ListerPerso.listerPerso(sc, guerriers, magiciens);
 
 			} else if (str.equals("Q")) {
 				System.out.println("Programme terminé!");
