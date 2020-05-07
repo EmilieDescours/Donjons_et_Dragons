@@ -1,6 +1,6 @@
 package main;
 
-public class Guerrier extends Personnage {
+public class Guerrier extends Personnages {
 
 	Arme arme;
 	Bouclier bouclier;

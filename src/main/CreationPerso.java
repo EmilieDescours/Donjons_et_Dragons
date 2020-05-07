@@ -11,6 +11,13 @@ public class CreationPerso {
 	private static int vie;
 	private static int force;
 
+	/**
+	 * 
+	 * 
+	 * @param sc
+	 * @param guerriers
+	 * @param magiciens
+	 */
 	public static void creationPerso(Scanner sc, ArrayList<Guerrier> guerriers, ArrayList<Magicien> magiciens) {
 		while (true) {
 

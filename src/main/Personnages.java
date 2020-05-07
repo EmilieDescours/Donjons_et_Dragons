@@ -1,12 +1,12 @@
 package main;
 
-public class Personnage {
+public abstract class  Personnages {
 
 	protected String nom;
 	protected String url;
 	protected int niveau_de_vie;
 	protected int force_attaque;
-	
+
 	// Les Setters *************************
 
 	public void setName(String newValue) {
@@ -42,6 +42,5 @@ public class Personnage {
 	public int getStrong() {
 		return this.force_attaque;
 	}
-
 
 }

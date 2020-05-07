@@ -1,6 +1,6 @@
 package main;
 
-public class Magicien extends Personnage {
+public class Magicien extends Personnages {
 
 	private Sort sort;
 	private Philtre philtre;
